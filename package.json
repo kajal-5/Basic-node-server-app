@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-url-routing",
+  "version": "1.0.0",
+  "description": "Basic Node.js routing project using http module",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
