@@ -7,5 +7,17 @@
     "start": "node app.js"
   },
   "author": "Your Name",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kajal-5/Basic-node-server-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kajal-5/Basic-node-server-app/issues"
+  },
+  "homepage": "https://github.com/kajal-5/Basic-node-server-app#readme"
 }
