@@ -1,0 +1,6 @@
+[
+  {
+    "username": "abcd",
+    "email": "kk@gmail.com"
+  }
+]
