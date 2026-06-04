@@ -1,25 +1,33 @@
 const http = require("http");
+const express= require("express");
+const app = express();
+const orderRouter = require('./routes/orders');
+const userRouter =  require("./routes/users");
 
-const server = http.createServer((req, res) => {
+app.use('/orders',orderRouter);
+app.use("/users",userRouter);
 
-    if (req.url === "/home") {
-        res.end("Welcome home");
-    }
 
-    else if (req.url === "/about") {
-        res.end("Welcome to About Us");
-    }
+// const server = http.createServer((req, res) => {
 
-    else if (req.url === "/node") {
-        res.end("Welcome to my Node Js project");
-    }
+//     if (req.url === "/home") {
+//         res.end("Welcome home");
+//     }
 
-    else {
-        res.end("Page Not Found");
-    }
+//     else if (req.url === "/about") {
+//         res.end("Welcome to About Us");
+//     }
 
-});
+//     else if (req.url === "/node") {
+//         res.end("Welcome to my Node Js project");
+//     }
 
-server.listen(3000, () => {
+//     else {
+//         res.end("Page Not Found");
+//     }
+
+// });
+
+app.listen(3000, () => {
     console.log("Server running on port 3000");
 });
