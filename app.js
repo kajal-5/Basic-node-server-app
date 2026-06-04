@@ -3,32 +3,15 @@ const express= require("express");
 const app = express();
 const orderRouter = require('./routes/orders');
 const userRouter =  require("./routes/users");
-// const bookRouter = 
+const studentRouter = require('./routes/students') ;
 
 app.use('/orders',orderRouter);
 app.use("/users",userRouter);
+app.use("/students",studentRouter);
 
-
-// const server = http.createServer((req, res) => {
-
-//     if (req.url === "/home") {
-//         res.end("Welcome home");
-//     }
-
-//     else if (req.url === "/about") {
-//         res.end("Welcome to About Us");
-//     }
-
-//     else if (req.url === "/node") {
-//         res.end("Welcome to my Node Js project");
-//     }
-
-//     else {
-//         res.end("Page Not Found");
-//     }
-
-// });
-
+app.use((req,res)=>{
+    res.status(404).send("404 page not found");
+})
 app.listen(3000, () => {
     console.log("Server running on port 3000");
 });
