@@ -1,11 +1,17 @@
+const userServices= require("../services/userServices")
+
 exports.getuserController=(req,res)=>{
-res.send("all user list");
+    const result=userServices.getuser();
+    console.log("GET USER HIT");
+    res.send(result);
 }
 
 exports.postuserController= (req,res)=>{
-    res.send("new user added");
+    const result=userServices.postuser();
+    res.send(result);
 }
 
 exports.getuserControllerById=(req,res)=>{
-    res.send(`get user by id ${req.params.id}`);
+    const result =userServices.getuserbyiId(req.params.id);
+    res.send(result);
 }

@@ -13,9 +13,18 @@ app.use("/students",studentRouter);
 app.use("/products", productRouter);
 app.use("/cart",cartRouter);
 
+
+
+/////////////////////HTML/////////////////////////
+app.get("/api/products", (req,res)=>{
+    console.log(__dirname);
+    res.sendFile(__dirname + "/View/products.html");
+})
+
 app.use((req,res)=>{
     res.status(404).send("404 page not found");
 })
+
 app.listen(3000, () => {
     console.log("Server running on port 3000");
 });
