@@ -4,7 +4,7 @@
         <title>Products</title>
     </head>
     <body>
-        <form>
+        <form onSubmit="onSubmitHandler(event)">
             <label for="product" > Product Name </label>
             <input
                 type="text"
@@ -15,5 +15,7 @@
                 type="submit"
             > ADD Product </button>
         </form>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/js/product.js"></script>
     </body>
 </html>
